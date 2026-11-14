@@ -1,92 +1,160 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initialscale=1.0">
   <title>Zweta Zana Sasmira | Beranda</title>
+  <link rel="icon" href="img/zweta foto.png.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2? family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
   <script src="js/latihan.js" defer></script>
   <script src="js/logika.js" defer></script>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="container navbar">
+
       <h1>Zweta Zana Sasmira</h1>
+
+      <!-- Menu Laptop -->
       <nav class="menu-laptop">
         <ul>
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
         </ul>
       </nav>
-      <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+
+      <!-- Menu Ponsel -->
       <details class="menu-ponsel">
         <summary>Menu</summary>
+
         <nav>
           <ul>
             <li><a href="index.html">Beranda</a></li>
             <li><a href="proyek.html">Proyek</a></li>
             <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
           </ul>
         </nav>
       </details>
-    </div>
+
+      <!-- Tombol Mode Gelap -->
+      <button type="button" id="tombol-tema" class="tombol
+tema">Mode Gelap</button </div>
   </header>
 
+
+  <!-- MAIN -->
   <main>
     <div class="container">
+
+      <!-- HERO -->
       <section class="hero">
-        <img src="img/zweta foto.png.png" alt="documents/zweta foto.png" width="180">
+
+        <img src="img/zweta foto.png.png" alt="Foto profil Zweta Zana Sasmira" width="180">
+
         <div>
           <h2>Halo, saya Zweta!</h2>
-          <p>Siswi kelas X PPLG 1 SMKS Brantas Karangkates, calon Junior Web Developer di Kelas Industri UBIG.</p>
-          <a href="proyek.html" class="tombol">Lihat Proyek Saya</a>
+
+          <p>
+            Siswi kelas X PPLG 1 SMKS Brantas Karangkates,
+            calon Junior Web Developer di Kelas Industri UBIG.
+          </p>
+
+          <a href="proyek.html" class="tombol">
+            Lihat Proyek Saya
+          </a>
         </div>
+
       </section>
 
+
+      <!-- TENTANG SAYA -->
       <section class="kartu">
         <h2>Tentang Saya</h2>
-        <p>Saya tinggal di Blitar dan senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.</p>
+
+        <p>
+          Saya tinggal di Blitar dan senang mencoba hal baru
+          di dunia teknologi. Saya ingin bisa membuat website
+          yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
+        </p>
       </section>
 
+
+      <!-- DAFTAR KARTU -->
       <div class="daftar-kartu">
+
+        <!-- HOBI -->
         <section class="kartu">
           <h2>Hobi</h2>
+
           <ul>
             <li>Menyanyi</li>
             <li>Mendengarkan musik</li>
             <li>Menggambar</li>
-            <li>Menari modern</li>
+            <li>Menari moern</li>
           </ul>
         </section>
 
+
+        <!-- CITA-CITA -->
         <section class="kartu">
           <h2>Cita-cita</h2>
-          <p>Menjadi <strong>IT Infrastructure Engineer</strong>. Langkah yang saya rencanakan:</p>
+
+          <p>
+            Menjadi <strong>IT Infrastructure Engineer</strong>.
+            Langkah yang saya rencanakan:
+          </p>
+
           <ol>
             <li>Menuntaskan Kelas Industri UBIG sampai Semester 4</li>
             <li>Mencari pengalaman dan sertifikasi</li>
-            <li>Mempelajari keterampilan IT Infrastructure</li>
+            <li>Mmpelajari keterampilan IT Infrastructure</li>
           </ol>
         </section>
 
+
+        <!-- KEAHLIAN DINAMIS -->
         <section class="kartu">
           <h2>Keahlian</h2>
+
           <ul>
             <li>HTML dasar (sedang dipelajari)</li>
             <li>Mengetik cepat</li>
             <li>JS dasar (sedang dipelajari)</li>
           </ul>
-        </section>
-      </div>
 
+          <p id="jumlah-skill"></p>
+
+          <!-- Daftar keahlian akan diisi JavaScript -->
+          <ul id="daftar-skill"></ul>
+        </section>
+
+      </div>
+      <!-- PENUTUP DAFTAR KARTU -->
+
+
+      <!-- JADWAL BELAJAR -->
       <section class="kartu">
+
         <h2>Jadwal Belajar</h2>
+
         <table>
-          <caption>Jadwal belajar mandiri setiap minggu</caption>
+
+          <caption>
+            Jadwal belajar mandiri setiap minggu
+          </caption>
+
           <thead>
             <tr>
               <th>Hari</th>
@@ -94,33 +162,56 @@
               <th>Kegiatan</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>Senin</td>
               <td>19.00 - 20.00</td>
               <td>Membaca ulang modul</td>
             </tr>
+
             <tr>
               <td>Rabu</td>
               <td>19.00 - 21.00</td>
               <td>Mengerjakan tugas praktik</td>
             </tr>
+
             <tr>
               <td>Jumat</td>
               <td>19.30 - 21.00</td>
               <td>Merekam video dan menulis laporan</td>
             </tr>
           </tbody>
+
         </table>
+
       </section>
+
     </div>
   </main>
 
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js" defer></script>
+
+
+  <!-- FOOTER -->
   <footer>
-    <p>Kontak: <a href="mailto:zweta.rpl@gmail.com">zweta.rpl@gmail.com</a> |
+
+    <p>
+      Kontak:
+      <a href="mailto:zweta.rpl@gmail.com">zweta.rpl@gmail.com</a> |
       <a href="https://github.com/Zweta0106" target="_blank">GitHub</a> |
-      <a href="http://www.youtube.com/@zwetarpl" target="_blank">YouTube</a></p>
-    <p>&copy; 2026 Zweta Zana Sasmira. Dibuat di Kelas Industri UBIG.</p>
+      <a href="http://www.youtube.com/@zwetarpl" target="_blank">YouTube</a>
+    </p>
+
+    <p>
+      &copy; 2026 Zweta Zana Sasmira.
+      Dibuat di Kelas Industri UBIG.
+    </p>
+
   </footer>
+
 </body>
+
 </html>

@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/latihan.js" defer></script>
+  <script src="js/logika.js" defer></script>
 </head>
 <body>
   <header>
@@ -18,6 +21,7 @@
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
         </ul>
       </nav>
       <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
@@ -28,6 +32,7 @@
             <li><a href="index.html">Beranda</a></li>
             <li><a href="proyek.html">Proyek</a></li>
             <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
           </ul>
         </nav>
       </details>
@@ -64,7 +69,8 @@
           </p>
           <p>
             <label for="pesan">Pesan</label><br>
-            <textarea id="pesan" name="pesan" rows="5" cols="40" placeholder="Tulis pesanmu di sini" required></textarea>
+            <textarea id="pesan" name="pesan" rows="5" cols="40"  maxlength="300" placeholder="Tulis pesanmu di sini" required></textarea><br>
+            <span id="hitung-karakter" class="keterangan">0/300 karakter</span>
           </p>
           <button type="submit">Kirim Pesan</button>
         </form>
@@ -75,7 +81,7 @@
   <footer>
     <p>Kontak: <a href="mailto:zweta.rpl@gmail.com">zweta.rpl@gmail.com</a> |
       <a href="/" target="_blank">GitHub</a> |
-      <a href="https://github.coms" target="_blank">YouTube</a></p>
+      <a href="https://github.com/Zweta0106" target="_blank">YouTube</a></p>
       <a href="http://www.youtube.com/@zwetarpl" target="_blank">YouTube</a></p>
     <p>&copy; 2026 Zweta Zana Sasmira. Dibuat di Kelas Industri UBIG.</p>
   </footer>

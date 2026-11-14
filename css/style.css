@@ -1,4 +1,4 @@
-/* Gaya portofolio Andi Pratama
+/* Gaya portofolio Zweta Zana Sasmira
    Palet: #1D3557 (utama), #E63946 (aksen), #F1FAEE (latar)
    Huruf: Poppins (judul), Inter (isi)
    Tata letak: mobile first, titik ubah 768px (tablet) dan 1024px (laptop) */
@@ -19,13 +19,15 @@ body {
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #333333;
-  background-color: #F1FAEE;
+  color: var(--warna-teks)#333333 
+  background-color var(--warna-latar--)#F1FAEE
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Poppins", Arial, sans-serif;
-  color: #1D3557;
+  color: var(--warna-judul)#1D3557;
   line-height: 1.3;
 }
 
@@ -33,12 +35,14 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   margin-bottom: 1rem;
 }
 
 a {
-  color: #E63946;
+  color: var(--warna-tautan)#E63946;
 }
 
 /* 3. Wadah, header, dan menu */
@@ -50,7 +54,7 @@ a {
 
 header {
   background-color: #1D3557;
-  color: #FFFFFF;
+  color: var(--warna-utama)#FFFFFF;
   padding: 1rem 0;
 }
 
@@ -136,7 +140,7 @@ main {
 }
 
 .kartu {
-  background-color: #FFFFFF;
+  background-color: var(--warna-kartu)#FFFFFF;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid #DDDDDD;
@@ -172,7 +176,8 @@ caption {
   margin-bottom: 0.5rem;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #CCCCCC;
   padding: 0.5rem 0.75rem;
   text-align: left;
@@ -180,7 +185,7 @@ th, td {
 
 th {
   background-color: #1D3557;
-  color: #FFFFFF;
+  color: var(--warna-utama)#FFFFFF;
 }
 
 /* 6. Form */
@@ -188,7 +193,15 @@ label {
   font-weight: 600;
 }
 
-input, select, textarea {
+.keterangan {
+  font-size: 0.875rem;
+}
+
+input,
+select,
+textarea {
+  background-color: var(--warna-kartu);
+  color: var(--warna-teks);
   width: 100%;
   max-width: 22rem;
   padding: 0.6rem;
@@ -213,7 +226,7 @@ button {
 
 /* 7. Footer */
 footer {
-  background-color: #1D3557;
+  background-color: var(--warna-utama)#1D3557;
   color: #F1FAEE;
   text-align: center;
   padding: 1.5rem;
@@ -262,3 +275,69 @@ footer a {
     font-size: 2.75rem;
   }
 }
+
+/* 10. Tombol tema, filter, dan label kategori */
+.tombol-tema {
+  padding: 0.5rem 0.9rem;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tombol-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--warna-garis);
+  background-color: var(--warna-kartu);
+  color: var(--warna-judul);
+}
+.label {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--warna-latar);
+  color: var(--warna-judul);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 11. Tema gelap: isi variabel diganti saat body memiliki class 
+gelap */
+body.gelap {
+  --warna-utama: #A8DADC;
+  --warna-judul: #A8DADC;
+  --warna-tautan: #FF8A8A;
+  --warna-latar: #121A24;
+  --warna-teks: #E3E8EE;
+  --warna-kartu: #1C2836;
+  --warna-garis: #34465A;
+}
+
+body.gelap {
+    background-color: #121A24 !important;
+    color: #E3E8EE !important
+}
+
+/* Warna kartu saat mode gelap */
+body.gelap .kartu {
+  background-color: var(--warna-kartu);
+  color: var(--warna-teks);
+  border-color: var(--warna-garis);
+}
+
+
+
+
+
+
+
+
+
+
+

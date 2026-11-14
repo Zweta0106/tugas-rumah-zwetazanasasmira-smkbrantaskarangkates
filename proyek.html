@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zweta Zana Sasmira | Proyek</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/latihan.js" defer></script>
+  <script src="js/logika.js" defer></script>
 </head>
+
 <body>
   <header>
     <div class="container navbar">
@@ -18,6 +24,7 @@
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
+           <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
         </ul>
       </nav>
       <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
@@ -28,6 +35,7 @@
             <li><a href="index.html">Beranda</a></li>
             <li><a href="proyek.html">Proyek</a></li>
             <li><a href="kontak.html">Kontak</a></li>
+             <li><a href="kalkulator/kalkulator.html">Kalkulator</a></li>
           </ul>
         </nav>
       </details>
@@ -39,26 +47,17 @@
       <section>
         <h2>Proyek Saya</h2>
         <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
-
-        <div class="daftar-kartu">
-          <article class="kartu">
-            <h3>Halaman Profil Pertama</h3>
-            <img src="img/proyek.profil.png" alt="documents/proyek.profil" width="280">
-            <p>Halaman web pertama saya, berisi perkenalan, foto, hobi, cita-cita, keahlian, dan kontak. Dibuat dengan HTML dasar di Minggu 01.</p>
-          </article>
-
-          <article class="kartu">
-            <h3>Form Kontak</h3>
-            <img src="img/proyek.kontak.png" alt="documents/proyek.kontak" width="280">
-            <p>Form untuk menghubungi saya. Setiap isian memiliki label dan wajib diisi, sehingga browser menolak form yang masih kosong.</p>
-          </article>
-
-          <article class="kartu">
-            <h3>Tabel Jadwal Belajar</h3>
-            <img src="img/proyek.jadwal.png" alt="documents/proyek.jadwal" width="280">
-            <p>Tabel berisi jadwal belajar mandiri saya setiap minggu, disusun dengan thead dan tbody.</p>
-          </article>
+        <div class="filter-proyek" role="group" aria-label="Filter proyek berdasarkan kategori">
+          <button type="button" class="filter-proyek-tombol aktif" data-filter-proyek="semua"
+            aria-pressed="true">Semua</button>
+          <button type="button" class="filter-proyek-tombol" data-filter-proyek="HTML"
+            aria-pressed="false">HTML</button>
+          <button type="button" class="filter-proyek-tombol" data-filter-proyek="CSS" aria-pressed="false">CSS</button>
+          <button type="button" class="filter-proyek-tombol" data-filter-proyek="JavaScript"
+            aria-pressed="false">JavaScript</button>
         </div>
+        <p id="jumlah-proyek" aria-live="polite"></p>
+        <div class="daftar-kartu" id="daftar-proyek"></div>
       </section>
 
       <!-- FAQ dengan details dan summary -->
@@ -66,7 +65,8 @@
         <h2>Pertanyaan yang Sering Diajukan</h2>
         <details>
           <summary>Bahasa apa yang dipakai untuk membuat proyek ini?</summary>
-          <p>Semua proyek di halaman ini dibuat dengan HTML. Tampilannya akan saya rapikan dengan CSS mulai Minggu 03.</p>
+          <p>Semua proyek di halaman ini dibuat dengan HTML. Tampilannya akan saya rapikan dengan CSS mulai Minggu 03.
+          </p>
         </details>
         <details>
           <summary>Apakah saya menerima pesanan pembuatan website?</summary>
@@ -79,8 +79,10 @@
   <footer>
     <p>Kontak: <a href="mailto:zweta.rpl@gmail.com">zweta.rpl@gmail.com</a> |
       <a href="https://github.com/Zweta0106" target="_blank">GitHub</a> |
-      <a href="http://www.youtube.com/@zwetarpl" target="_blank">YouTube</a></p>
+      <a href="http://www.youtube.com/@zwetarpl" target="_blank">YouTube</a>
+    </p>
     <p>&copy; 2026 Zweta Zana Sasmira. Dibuat di Kelas Industri UBIG.</p>
   </footer>
 </body>
+
 </html>
