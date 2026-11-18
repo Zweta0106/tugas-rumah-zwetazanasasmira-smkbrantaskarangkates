@@ -331,6 +331,12 @@ body.gelap .kartu {
   border-color: var(--warna-garis);
 }
 
+.hampir-penuh
+var(--warna-aksen)tebal;
+
+.tombol-kedua
+background-color var(--warna-utama) #E63946
+
 
 
 

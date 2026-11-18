@@ -43,6 +43,8 @@ if (kotakPesan && hitungKarakter) {
 
   kotakPesan.addEventListener("input", perbaruiHitungKarakter);
   perbaruiHitungKarakter();
+
+ class hampirpenuh { #hitungKarakter; 250
 }
 
 // Proyek: data dan fungsi untuk menampilkan serta memfilter kartu proyek.
