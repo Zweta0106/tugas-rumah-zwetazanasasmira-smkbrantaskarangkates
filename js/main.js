@@ -43,9 +43,13 @@ if (kotakPesan && hitungKarakter) {
 
   kotakPesan.addEventListener("input", perbaruiHitungKarakter);
   perbaruiHitungKarakter();
-
- class hampirpenuh { #hitungKarakter; 250
 }
+
+hitungKarakter.classList.toggle("hampir-penuh", kotakPesan.value.length >= 250);
+document.getElementById("tombol-kosongkan").addEventListener("click", () => {
+  kotakPesan.value = "";
+  perbaruiHitungKarakter();
+});
 
 // Proyek: data dan fungsi untuk menampilkan serta memfilter kartu proyek.
 let proyek = [];
@@ -163,6 +167,10 @@ const daftarRepo = document.querySelector("#daftar-repo");
 const statusRepo = document.querySelector("#status-repo");
 
 async function ambilRepo() {
+  if (!daftarRepo || !statusRepo) {
+    return;
+  }
+
   statusRepo.textContent = "Memuat...";
 
   try {
@@ -189,6 +197,6 @@ async function ambilRepo() {
   }
 }
 
-if (daftarRepo) {
+if (daftarRepo && statusRepo) {
   ambilRepo();
 }
