@@ -336,14 +336,9 @@ body.gelap .kartu {
   font-weight: bold;
 }
 
-.tombol-kedua
-background-color var(--warna-utama) #E63946
-
-
-
-
-
-
+.tombol-kedua {
+  background-color: var(--warna-utama, #E63946);
+}
 
 
 
